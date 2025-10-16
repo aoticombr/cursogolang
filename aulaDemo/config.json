@@ -1,0 +1,91 @@
+{
+  "dbs": [
+    {
+      "name": "db1",
+      "host": "localhost",
+      "port": 5432,
+      "user": "postgres",
+      "pass": "master",
+      "schema": "postgres",
+      "sid": "",
+      "poolsize": 20,
+      "maxconn": 100,
+      "ativo": true,
+      "trace": {
+        "path": "",
+        "ativo": false
+      },
+      "db": "PG"
+    }
+  ],
+  "services": [
+    {
+      "name": "meuapp",
+      "dbs": [
+        "db1"
+      ],
+      "ativo": false
+    }
+  ],
+  "bots": null,
+  "apis": [
+    {
+      "name": "meuapp",
+      "host": "localhost",
+      "port": 9090,
+      "path": "api",
+      "swagger": {
+        "authJwt": false,
+        "ativo": true
+      },
+      "cors": {
+        "maxAge": 300,
+        "allowCredentials": false,
+        "allowHeaders": [
+          "*"
+        ],
+        "exposedHeaders": [
+          "*"
+        ],
+        "allowMethods": [
+          "*"
+        ],
+        "allowOrigins": [
+          "*"
+        ],
+        "ativo": true
+      },
+      "https": {
+        "cert": "",
+        "key": "",
+        "validate": "0001-01-01T00:00:00Z",
+        "ativo": false
+      },
+      "gateway": {
+        "protocolo": "",
+        "host": "",
+        "port": 0,
+        "ativo": false
+      },
+      "dbs": [
+        "db1"
+      ],
+      "ativo": true
+    }
+  ],
+  "jwt": [
+    {
+      "name": "admin",
+      "expirationTime": 60,
+      "secret": "djfp23pjp34poj423p4ojx"
+    }
+  ],
+  "parans": null,
+  "certs": null,
+  "log": {
+    "nivel": 5,
+    "screen": true
+  },
+  "path": "",
+  "JsonFile": ""
+}
